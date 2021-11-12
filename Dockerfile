@@ -10,7 +10,7 @@ RUN mkdir /ofbiz && svn checkout http://svn.apache.org/repos/asf/ofbiz/branches/
 ## compile ofbiz
 WORKDIR /ofbiz
 
-### set default 2G memory for OFBiz. 
+### set default 2G memory for OFBiz.  
 ENV JAVA_OPTS -Xmx2G 
 
 RUN ./gradlew cleanAll loadDefault
