@@ -1,6 +1,5 @@
 FROM openjdk:8-jdk
 
-MAINTAINER Paul Mandeltort
 RUN apt-get update && apt-get upgrade -y && apt-get clean
 
 ## Clone/Checkout OFbiz from github
@@ -22,6 +21,6 @@ VOLUME /ofbiz/framework/entity/config/
 ##for Derby Database
 VOLUME /ofbiz/runtime/data
 
-EXPOSE 8443 8080
+EXPOSE 8443 
 
 ENTRYPOINT ./gradlew ofbiz
